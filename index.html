@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loging and Registartion Form </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <header>
+            <h1>SEND-IT, <i>The Courier Service Application</i></h1>
+        </header>
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form">
+                <input type="text" placeholder="user name">
+                <input type="text" placeholder="password">
+                <input type="text" placeholder="email id">
+
+                <button>Create</button>
+                <p class="message-a">Already Registered?<a href="#">Login</a></p>
+            </form>
+
+            <form class="login-form">
+                    <input type="text" placeholder="user name">
+                    <input type="password" placeholder="password">
+    
+                    <button id="login-main" onclick="openMainPage()">Login</button>
+                    <p class="message-b">Not Registered?<a href="#">Register</a></p>
+            </form>
+
+        </div>
+    </div>
+    
+    <script>
+        var controller_page = document.getElementById("login-main");
+      
+        document.querySelector('.message-a a').addEventListener('click', function(){
+            document.querySelector('.register-form').style.display='none';
+            document.querySelector('.message-b').style.display='none';
+
+        });
+
+        document.querySelector('.message-b a').addEventListener('click', function(){
+            document.querySelector('.login-form').style.display='none';
+            document.querySelector('.message-a').style.display='none';
+        });
+
+        function openMainPage() {
+            window.open("main.html");
+        }
+        
+
+    
+    </script>
+    
+</body>
+</html>
